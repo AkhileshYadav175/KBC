@@ -16,6 +16,10 @@ function App() {
     return localStorage.getItem("kbc_is_muted") === "true";
   });
   const [activeQuestions, setActiveQuestions] = useState(() => {
+    const savedName = localStorage.getItem("kbc_player_name") || "";
+    if (savedName.trim().replace(/\s+/g, " ").toLowerCase() === "khushi soni") {
+      return khushiSoniQuestions;
+    }
     const saved = localStorage.getItem("kbc_active_questions");
     return saved ? JSON.parse(saved) : [];
   });
@@ -50,7 +54,7 @@ function App() {
     setPlayerName(name);
     setIsMuted(mutedSetting);
     
-    if (name.trim().toLowerCase() === "khushi soni") {
+    if (name.trim().replace(/\s+/g, " ").toLowerCase() === "khushi soni") {
       setActiveQuestions(khushiSoniQuestions);
     } else {
       // Get current contestant group index from localStorage, default to 0

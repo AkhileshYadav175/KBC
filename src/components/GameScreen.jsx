@@ -81,7 +81,7 @@ export default function GameScreen({ playerName, initialMuted, questions, onGame
 
   // Determine initial timer value based on level
   const getTimerForLevel = (levelIndex) => {
-    if (playerName.trim().toLowerCase() === "khushi soni") {
+    if (playerName.trim().replace(/\s+/g, " ").toLowerCase() === "khushi soni") {
       return 60; // Khushi Soni gets 60 seconds for all questions
     }
     if (levelIndex < 5) return 30; // Level 1-5: 30s
