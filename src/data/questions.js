@@ -580,3 +580,66 @@ export const contestantGroups = [
     }
   ]
 ];
+
+export const khushiSoniQuestions = [
+  {
+    id: 901,
+    question: "Which of these is the most important factor in creating a positive first impression during an interview?",
+    options: [
+      "Expensive clothes",
+      "Confident body language and a smile",
+      "Speaking very fast",
+      "Memorizing every answer"
+    ],
+    answerIndex: 1,
+    difficulty: "easy"
+  },
+  {
+    id: 902,
+    question: "Which habit contributes the MOST to personality development?",
+    options: [
+      "Comparing yourself with others",
+      "Learning continuously and accepting feedback",
+      "Avoiding challenges",
+      "Talking more than listening"
+    ],
+    answerIndex: 1,
+    difficulty: "easy"
+  },
+  {
+    id: 903,
+    question: "Before an interview, what is the BEST way to reduce stress?",
+    options: [
+      "Skip breakfast",
+      "Keep revising until the last minute",
+      "Practice deep breathing or meditation for a few minutes",
+      "Drink multiple cups of coffee"
+    ],
+    answerIndex: 2,
+    difficulty: "easy"
+  },
+  {
+    id: 904,
+    question: "During an interview, if you don't know the answer to a question, what should you do?",
+    options: [
+      "Make up an answer",
+      "Stay silent",
+      "Honestly admit it and explain how you would find the solution",
+      "Change the topic"
+    ],
+    answerIndex: 2,
+    difficulty: "easy"
+  },
+  {
+    id: 905,
+    question: "Which of the following is a sign of a strong personality?",
+    options: [
+      "Dominating every conversation",
+      "Always trying to prove yourself right",
+      "Respecting others while confidently expressing your own thoughts",
+      "Speaking the loudest in the room"
+    ],
+    answerIndex: 2,
+    difficulty: "easy"
+  }
+];

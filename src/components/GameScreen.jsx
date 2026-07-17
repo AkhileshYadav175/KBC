@@ -81,6 +81,9 @@ export default function GameScreen({ playerName, initialMuted, questions, onGame
 
   // Determine initial timer value based on level
   const getTimerForLevel = (levelIndex) => {
+    if (playerName.trim().toLowerCase() === "khushi soni") {
+      return 60; // Khushi Soni gets 60 seconds for all questions
+    }
     if (levelIndex < 5) return 30; // Level 1-5: 30s
     if (levelIndex < 10) return 45; // Level 6-10: 45s
     return 60; // Level 11-15: 60s
@@ -145,7 +148,9 @@ export default function GameScreen({ playerName, initialMuted, questions, onGame
     setIsRoundStarted(true);
     soundManager.stopNextQuestionIntro();
     soundManager.stopAll(); // Stops the intro theme sound instantly if it's still playing
-    soundManager.startClock();
+    if (isTimerActive) {
+      soundManager.startClock();
+    }
   };
 
   // Pause and resume clock sound when activeModal (lifeline modal) opens or closes
@@ -563,7 +568,7 @@ export default function GameScreen({ playerName, initialMuted, questions, onGame
           <div className="compact-prize-tree hidden lg:block">
             <div className="compact-prize-tree-title">Prize Tree</div>
             <div className="compact-money-ladder-container">
-              {prizeMoneyMap.map((val, idx) => {
+              {prizeMoneyMap.slice(0, questions.length).map((val, idx) => {
                 const isSafe = safeZoneIndices.includes(idx);
                 const isActive = idx === currentLevelIndex;
                 const isCompleted = idx < currentLevelIndex;
@@ -941,7 +946,7 @@ export default function GameScreen({ playerName, initialMuted, questions, onGame
               Prize Tree
             </h3>
             <div className="money-ladder-container mb-6 max-h-[60vh] overflow-y-auto pr-2">
-              {prizeMoneyMap.map((val, idx) => {
+              {prizeMoneyMap.slice(0, questions.length).map((val, idx) => {
                 const isSafe = safeZoneIndices.includes(idx);
                 const isActive = idx === currentLevelIndex;
                 const isCompleted = idx < currentLevelIndex;

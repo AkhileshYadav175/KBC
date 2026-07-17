@@ -3,7 +3,7 @@ import WelcomeScreen from "./components/WelcomeScreen";
 import GameScreen from "./components/GameScreen";
 import GameOverScreen from "./components/GameOverScreen";
 import { soundManager } from "./utils/soundManager";
-import { contestantGroups } from "./data/questions";
+import { contestantGroups, khushiSoniQuestions } from "./data/questions";
 
 function App() {
   const [screen, setScreen] = useState(() => {
@@ -50,19 +50,23 @@ function App() {
     setPlayerName(name);
     setIsMuted(mutedSetting);
     
-    // Get current contestant group index from localStorage, default to 0
-    const groupStr = localStorage.getItem("kbc_contestant_group_index");
-    let groupIndex = groupStr ? parseInt(groupStr, 10) : 0;
-    if (isNaN(groupIndex) || groupIndex < 0 || groupIndex >= 3) {
-      groupIndex = 0;
+    if (name.trim().toLowerCase() === "khushi soni") {
+      setActiveQuestions(khushiSoniQuestions);
+    } else {
+      // Get current contestant group index from localStorage, default to 0
+      const groupStr = localStorage.getItem("kbc_contestant_group_index");
+      let groupIndex = groupStr ? parseInt(groupStr, 10) : 0;
+      if (isNaN(groupIndex) || groupIndex < 0 || groupIndex >= 3) {
+        groupIndex = 0;
+      }
+
+      // Select the fixed group of 15 questions for the current session
+      const sessionQuestions = contestantGroups[groupIndex];
+      setActiveQuestions(sessionQuestions);
+
+      // Save next group index for next game session (0 -> 1 -> 2 -> 0 ...)
+      localStorage.setItem("kbc_contestant_group_index", (groupIndex + 1) % 3);
     }
-
-    // Select the fixed group of 15 questions for the current session
-    const sessionQuestions = contestantGroups[groupIndex];
-    setActiveQuestions(sessionQuestions);
-
-    // Save next group index for next game session (0 -> 1 -> 2 -> 0 ...)
-    localStorage.setItem("kbc_contestant_group_index", (groupIndex + 1) % 3);
 
     setScreen("game");
   };
