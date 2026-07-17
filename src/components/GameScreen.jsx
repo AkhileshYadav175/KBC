@@ -246,7 +246,7 @@ export default function GameScreen({ playerName, initialMuted, questions, onGame
       setIsSubmitting(false);
       if (selectedAnswerIndex === currentQuestion.answerIndex) {
         soundManager.playCorrect();
-        if (safeZoneIndices.includes(currentLevelIndex) && currentLevelIndex !== 14) {
+        if (safeZoneIndices.includes(currentLevelIndex) && currentLevelIndex !== questions.length - 1) {
           setShowSafeZoneBanner(true);
           setTimeout(() => setShowSafeZoneBanner(false), 5000);
         }
@@ -265,11 +265,32 @@ export default function GameScreen({ playerName, initialMuted, questions, onGame
     }
   };
 
+  const getQuitWinnings = () => {
+    if (isShowingResult && selectedAnswerIndex === currentQuestion.answerIndex) {
+      // If we just answered correctly and quit right away
+      if (currentLevelIndex === 4) {
+        return prizeMoneyMap[4]; // Safe zone 1 milestone: ₹500
+      }
+      if (currentLevelIndex === 9) {
+        return prizeMoneyMap[9]; // Safe zone 2 milestone: ₹1,100
+      }
+      if (currentLevelIndex < 4) {
+        return "₹0"; // Before safe zone 1
+      }
+      if (currentLevelIndex > 4 && currentLevelIndex < 9) {
+        return prizeMoneyMap[2]; // Drop to 2 levels below safe zone 1: ₹300
+      }
+      return prizeMoneyMap[7]; // Drop to 2 levels below safe zone 2: ₹800
+    }
+    
+    // If we quit during a question (mid-round) or before starting the next round
+    return getWinningsOnLoss();
+  };
+
   const handleQuitGame = () => {
     soundManager.stopBackgroundTension();
     soundManager.stopLock();
-    const winnings = currentLevelIndex === 0 ? "₹0" : prizeMoneyMap[currentLevelIndex - 1];
-    onGameOver("quit", winnings, currentLevelIndex, questions.length);
+    onGameOver("quit", getQuitWinnings(), currentLevelIndex, questions.length);
   };
 
   // --- LIFELINES IMPLEMENTATION ---
@@ -542,7 +563,7 @@ export default function GameScreen({ playerName, initialMuted, questions, onGame
         <div>
           <button
             onClick={() => setActiveModal("quit")}
-            disabled={isAnswerLocked || isTimeOutActive}
+            disabled={isSubmitting || isTimeOutActive}
             className="btn-quit"
           >
             Quit Game
@@ -917,7 +938,7 @@ export default function GameScreen({ playerName, initialMuted, questions, onGame
             <p className="text-sm mb-6 leading-relaxed" style={{ color: "var(--text-light)" }}>
               Are you sure you want to quit? You will walk away with your current winnings of{" "}
               <strong style={{ color: "var(--gold-primary)", fontSize: "1.1rem" }}>
-                {currentLevelIndex === 0 ? "₹0" : prizeMoneyMap[currentLevelIndex - 1]}
+                {getQuitWinnings()}
               </strong>.
             </p>
             <div className="flex gap-md" style={{ justifyContent: "center" }}>

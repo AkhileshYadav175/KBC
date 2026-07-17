@@ -5,78 +5,87 @@ export default function GameOverScreen({ playerName, reason, amount, questionsAn
   const canvasRef = useRef(null);
 
   useEffect(() => {
-    // Play sound based on result
-    if (reason === "won" || parseFloat(amount.replace(/[^0-9]/g, "")) > 320000) {
-      soundManager.playCorrect();
+    // Play sound based on result: play grand KBC theme sound if they won the game or walked away with any positive prize amount (> 0)
+    const hasWinnings = amount && amount !== "₹0";
+    if (reason === "won" || hasWinnings) {
+      soundManager.playTheme(false); // Play the authentic KBC theme song once
     } else if (reason === "timeout") {
       // Do nothing, alarm and hooter already played on GameScreen
     } else {
       soundManager.playWrong();
     }
 
-    // Setup basic canvas confetti if won/high score
-    if (reason === "won" || amount.includes("Crore")) {
+    let animationFrameId;
+    let handleResize;
+
+    // Setup basic canvas confetti if won/high score/any winnings
+    if (reason === "won" || hasWinnings) {
       const canvas = canvasRef.current;
-      if (!canvas) return;
-      const ctx = canvas.getContext("2d");
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
+      if (canvas) {
+        const ctx = canvas.getContext("2d");
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
 
-      const particles = [];
-      const kbcColors = ["#ffd700", "#2ecc71", "#3498db", "#e67e22", "#ffea70", "#ff7979", "#2ecc71"];
-      for (let i = 0; i < 150; i++) {
-        particles.push({
-          x: Math.random() * canvas.width,
-          y: Math.random() * canvas.height - canvas.height,
-          r: Math.random() * 6 + 4,
-          d: Math.random() * canvas.height,
-          color: kbcColors[Math.floor(Math.random() * kbcColors.length)],
-          tilt: Math.random() * 10 - 5,
-          tiltAngleIncremental: Math.random() * 0.07 + 0.02,
-          tiltAngle: 0
-        });
-      }
-
-      let animationFrameId;
-      const draw = () => {
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-        particles.forEach((p, idx) => {
-          p.tiltAngle += p.tiltAngleIncremental;
-          p.y += (Math.cos(p.d) + 3 + p.r / 2) / 2;
-          p.x += Math.sin(p.tiltAngle);
-
-          ctx.save();
-          ctx.translate(p.x, p.y);
-          ctx.rotate(p.tiltAngle);
-          ctx.font = `bold ${Math.floor(p.r * 3.5)}px Outfit, sans-serif`;
-          ctx.fillStyle = p.color;
-          ctx.fillText("₹", 0, 0);
-          ctx.restore();
-
-          if (p.y > canvas.height) {
-            p.x = Math.random() * canvas.width;
-            p.y = -20;
-            p.tilt = Math.random() * 10 - 5;
-          }
-        });
-        animationFrameId = requestAnimationFrame(draw);
-      };
-
-      draw();
-
-      const handleResize = () => {
-        if (canvas) {
-          canvas.width = window.innerWidth;
-          canvas.height = window.innerHeight;
+        const particles = [];
+        const kbcColors = ["#ffd700", "#2ecc71", "#3498db", "#e67e22", "#ffea70", "#ff7979", "#2ecc71"];
+        for (let i = 0; i < 150; i++) {
+          particles.push({
+            x: Math.random() * canvas.width,
+            y: Math.random() * canvas.height - canvas.height,
+            r: Math.random() * 6 + 4,
+            d: Math.random() * canvas.height,
+            color: kbcColors[Math.floor(Math.random() * kbcColors.length)],
+            tilt: Math.random() * 10 - 5,
+            tiltAngleIncremental: Math.random() * 0.07 + 0.02,
+            tiltAngle: 0
+          });
         }
-      };
-      window.addEventListener("resize", handleResize);
 
-      return () => {
-        cancelAnimationFrame(animationFrameId);
-        window.removeEventListener("resize", handleResize);
-      };
+        const draw = () => {
+          ctx.clearRect(0, 0, canvas.width, canvas.height);
+          particles.forEach((p, idx) => {
+            p.tiltAngle += p.tiltAngleIncremental;
+            p.y += (Math.cos(p.d) + 3 + p.r / 2) / 2;
+            p.x += Math.sin(p.tiltAngle);
+
+            ctx.save();
+            ctx.translate(p.x, p.y);
+            ctx.rotate(p.tiltAngle);
+            ctx.font = `bold ${Math.floor(p.r * 3.5)}px Outfit, sans-serif`;
+            ctx.fillStyle = p.color;
+            ctx.fillText("₹", 0, 0);
+            ctx.restore();
+
+            if (p.y > canvas.height) {
+              p.x = Math.random() * canvas.width;
+              p.y = -20;
+              p.tilt = Math.random() * 10 - 5;
+            }
+          });
+          animationFrameId = requestAnimationFrame(draw);
+        };
+
+        draw();
+
+        handleResize = () => {
+          if (canvas) {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+          }
+        };
+        window.addEventListener("resize", handleResize);
+      }
     }
+
+    return () => {
+      soundManager.stopAll();
+      if (animationFrameId) {
+        cancelAnimationFrame(animationFrameId);
+      }
+      if (handleResize) {
+        window.removeEventListener("resize", handleResize);
+      }
+    };
   }, [reason, amount]);
 
   let headline = "GAME OVER";
@@ -103,7 +112,7 @@ export default function GameOverScreen({ playerName, reason, amount, questionsAn
 
   return (
     <div className="min-h-screen flex items-center justify-center p-4 relative overflow-hidden">
-      {(reason === "won" || amount.includes("Crore")) && (
+      {(reason === "won" || (amount && amount !== "₹0")) && (
         <canvas ref={canvasRef} className="absolute inset-0 pointer-events-none z-0" />
       )}
       

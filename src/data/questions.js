@@ -4,14 +4,14 @@ export const prizeMoneyMap = [
   "₹300",
   "₹400",
   "₹500", // Safe zone 1 (index 4, Level 5)
+  "₹600",
   "₹700",
+  "₹800",
   "₹900",
-  "₹1,100",
+  "₹1,100", // Safe zone 2 (index 9, Level 10)
   "₹1,300",
-  "₹1,500", // Safe zone 2 (index 9, Level 10)
-  "₹1,600",
+  "₹1,500",
   "₹1,700",
-  "₹1,800",
   "₹1,900",
   "₹2,100" // Safe zone 3 / Jackpot (index 14, Level 15)
 ];
