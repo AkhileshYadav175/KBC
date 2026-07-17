@@ -15,11 +15,13 @@ class KBCSoundManager {
       clock: "/clock-sound.mp3",
       nextQuestion: "https://raw.githubusercontent.com/aditya-obj/Quiz-App---Kaun-Banega-Crorepati/main/Question.mp3",
       hooter: "/Hooter.mp3",
-      alarm: "/IPhone “Alarm” Ringtone.m4a"
+      alarm: "/IPhone “Alarm” Ringtone.m4a",
+      nextQuestionIntro: "/WhatsApp Audio 2026-07-17 at 9.41.00 PM.mp3"
     };
 
     this.sounds = {};
     this.isInitialized = false;
+    this.currentFreshLockAudio = null;
   }
 
   init() {
@@ -123,20 +125,57 @@ class KBCSoundManager {
     this.stopSynthesizedBackground();
   }
 
-  playLock() {
+  playLock(loop = false) {
     this.init();
     if (this.muted) return;
     
     // Play lock sound
     const audio = this.sounds.lock;
     if (audio) {
+      try {
+        audio.pause();
+        audio.currentTime = 0;
+        audio.loop = loop;
+      } catch (e) {
+        console.warn("Error resetting lock sound:", e);
+      }
       audio.volume = 1.0;
-      audio.currentTime = 0;
       audio.play().catch((e) => {
-        this.synthesizeLock();
+        console.warn("Preloaded lock sound play failed, trying new Audio:", e);
+        try {
+          if (this.currentFreshLockAudio) {
+            try { this.currentFreshLockAudio.pause(); } catch (err) {}
+          }
+          const freshAudio = new Audio(this.audioAssets.lock);
+          freshAudio.volume = 1.0;
+          freshAudio.loop = loop;
+          this.currentFreshLockAudio = freshAudio;
+          freshAudio.play().catch(() => this.synthesizeLock());
+        } catch (err) {
+          this.synthesizeLock();
+        }
       });
     } else {
       this.synthesizeLock();
+    }
+  }
+
+  stopLock() {
+    const audio = this.sounds.lock;
+    if (audio) {
+      try {
+        audio.pause();
+        audio.currentTime = 0;
+        audio.loop = false;
+      } catch (e) {}
+    }
+    if (this.currentFreshLockAudio) {
+      try {
+        this.currentFreshLockAudio.pause();
+        this.currentFreshLockAudio.currentTime = 0;
+        this.currentFreshLockAudio.loop = false;
+      } catch (e) {}
+      this.currentFreshLockAudio = null;
     }
   }
 
@@ -237,6 +276,29 @@ class KBCSoundManager {
       audio.play().catch((e) => {
         console.warn("Next question sound play failed", e);
       });
+    }
+  }
+
+  playNextQuestionIntro(loop = true) {
+    this.init();
+    if (this.muted) return;
+    
+    const audio = this.sounds.nextQuestionIntro;
+    if (audio) {
+      audio.loop = loop;
+      audio.volume = 0.55;
+      audio.currentTime = 0;
+      audio.play().catch((e) => {
+        console.warn("Autoplay blocked or nextQuestionIntro play failed.", e);
+      });
+    }
+  }
+
+  stopNextQuestionIntro() {
+    const audio = this.sounds.nextQuestionIntro;
+    if (audio) {
+      audio.pause();
+      audio.currentTime = 0;
     }
   }
 

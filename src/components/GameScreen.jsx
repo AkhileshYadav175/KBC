@@ -20,6 +20,7 @@ export default function GameScreen({ playerName, initialMuted, questions, onGame
   const [selectedAnswerIndex, setSelectedAnswerIndex] = useState(null);
   const [isAnswerLocked, setIsAnswerLocked] = useState(false);
   const [isShowingResult, setIsShowingResult] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [timeLeft, setTimeLeft] = useState(() => {
     const saved = localStorage.getItem("kbc_game_screen_state");
     if (saved) {
@@ -104,6 +105,9 @@ export default function GameScreen({ playerName, initialMuted, questions, onGame
       if (!saved) {
         setTimeLeft(getTimerForLevel(currentLevelIndex));
       }
+      if (currentLevelIndex > 0) {
+        soundManager.playNextQuestionIntro(true);
+      }
       return;
     }
 
@@ -114,11 +118,19 @@ export default function GameScreen({ playerName, initialMuted, questions, onGame
     setIsShowingResult(false);
     setDisabledOptions([]);
     setIsTimeOutActive(false);
+    setIsSubmitting(false);
     soundManager.stopClock();
+    soundManager.stopLock();
+
+    if (currentLevelIndex > 0) {
+      soundManager.playNextQuestionIntro(true);
+    }
 
     return () => {
       soundManager.stopBackgroundTension();
       soundManager.stopClock();
+      soundManager.stopLock();
+      soundManager.stopNextQuestionIntro();
     };
   }, [currentLevelIndex]);
 
@@ -131,6 +143,7 @@ export default function GameScreen({ playerName, initialMuted, questions, onGame
 
   const handleStartRound = () => {
     setIsRoundStarted(true);
+    soundManager.stopNextQuestionIntro();
     soundManager.stopAll(); // Stops the intro theme sound instantly if it's still playing
     soundManager.startClock();
   };
@@ -210,19 +223,22 @@ export default function GameScreen({ playerName, initialMuted, questions, onGame
   const handleSelectOption = (idx) => {
     if (!isRoundStarted || isAnswerLocked || disabledOptions.includes(idx) || isTimeOutActive) return;
     setSelectedAnswerIndex(idx);
-    soundManager.playTick(); // subtle click feedback
-  };
-
-  const handleLockAnswer = () => {
-    if (selectedAnswerIndex === null || isAnswerLocked || isTimeOutActive) return;
     setIsAnswerLocked(true);
     soundManager.stopBackgroundTension();
     soundManager.stopClock();
-    soundManager.playLock();
+    soundManager.playLock(true); // Loop lock sound during discussion
+  };
+
+  const handleSubmitAnswer = () => {
+    if (selectedAnswerIndex === null || isTimeOutActive || isSubmitting) return;
+    
+    setIsSubmitting(true);
 
     // suspense delay before revealing correctness (3.2 seconds allows the lock tune to play)
     setTimeout(() => {
+      soundManager.stopLock(); // Stop looping lock sound
       setIsShowingResult(true);
+      setIsSubmitting(false);
       if (selectedAnswerIndex === currentQuestion.answerIndex) {
         soundManager.playCorrect();
         if (safeZoneIndices.includes(currentLevelIndex) && currentLevelIndex !== 14) {
@@ -246,6 +262,7 @@ export default function GameScreen({ playerName, initialMuted, questions, onGame
 
   const handleQuitGame = () => {
     soundManager.stopBackgroundTension();
+    soundManager.stopLock();
     const winnings = currentLevelIndex === 0 ? "₹0" : prizeMoneyMap[currentLevelIndex - 1];
     onGameOver("quit", winnings, currentLevelIndex, questions.length);
   };
@@ -652,13 +669,13 @@ export default function GameScreen({ playerName, initialMuted, questions, onGame
               </button>
             )}
 
-            {isRoundStarted && selectedAnswerIndex !== null && !isAnswerLocked && (
+            {isRoundStarted && isAnswerLocked && !isShowingResult && (
               <button
-                onClick={handleLockAnswer}
-                disabled={isTimeOutActive}
+                onClick={handleSubmitAnswer}
+                disabled={isTimeOutActive || isSubmitting}
                 className="btn-lock"
               >
-                Lock Answer (Lock kiya jaaye!)
+                {isSubmitting ? "Checking Answer..." : "Submit Answer (Submit karein)"}
               </button>
             )}
 
