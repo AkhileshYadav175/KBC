@@ -24,14 +24,14 @@ export const contestantGroups = [
     // Easy (Level 1-5)
     {
       id: 101,
-      question: "Ek website par \"Buy Now\" button bright aur clearly visible rakha gaya hai. Iska primary purpose kya hai?",
+      question: "Ek website ka layout mobile screen par automatically adjust ho jata hai. Is concept ko kya kehte hain?",
       options: [
-        "Website ko colorful banana",
-        "User ka attention desired action par lana",
-        "Website ki loading speed badhana",
-        "SEO improve karna"
+        "Responsive Design",
+        "Adaptive Hosting",
+        "Dynamic Coding",
+        "Flexible Programming"
       ],
-      answerIndex: 1,
+      answerIndex: 0,
       difficulty: "easy"
     },
     {
@@ -39,11 +39,11 @@ export const contestantGroups = [
       question: "Ek video ke beech ka unwanted 5-second portion remove karna hai. Sabse appropriate editing action kya hoga?",
       options: [
         "Trim",
-        "Cut",
         "Transition",
+        "Cut",
         "Crop"
       ],
-      answerIndex: 1,
+      answerIndex: 2,
       difficulty: "easy"
     },
     {
@@ -51,33 +51,33 @@ export const contestantGroups = [
       question: "Agar ek customer product ko cart me add karta hai, lekin purchase complete nahi karta, ise kya kehte hain?",
       options: [
         "Bounce Rate",
-        "Cart Abandonment",
         "Conversion Drop",
-        "Customer Exit"
+        "Customer Exit",
+        "Cart Abandonment"
       ],
-      answerIndex: 1,
+      answerIndex: 3,
       difficulty: "easy"
     },
     {
       id: 104,
-      question: "Ek company ko job ke liye 500 resumes mile. Recruiter sabse pehle kis cheez ko quickly check karne ki sabse zyada possibility rakhta hai?",
+      question: "Ek restaurant Rs.500 ki dish ko Rs.499 me list karta hai. Ye pricing strategy mainly kis psychological effect ka use karti hai?",
       options: [
-        "Candidate ki complete life story",
-        "Relevant skills aur experience",
-        "Resume ka file size",
-        "Candidate ka favourite subject"
+        "Premium Pricing",
+        "Charm Pricing",
+        "Penetration Pricing",
+        "Cost-Based Pricing"
       ],
       answerIndex: 1,
       difficulty: "easy"
     },
     {
       id: 105,
-      question: "Ek restaurant Rs.500 ki dish ko Rs.499 me list karta hai. Ye pricing strategy mainly kis psychological effect ka use karti hai?",
+      question: "Ek customer Rs.2,000 ka product kharidne me hesitate kar raha hai. Website par \"Only 2 left in stock\" dikhaya jata hai. Ye primarily kis psychological principle ka use hai?",
       options: [
-        "Charm Pricing",
-        "Premium Pricing",
-        "Penetration Pricing",
-        "Cost-Based Pricing"
+        "Scarcity",
+        "Authority",
+        "Reciprocity",
+        "Consistency"
       ],
       answerIndex: 0,
       difficulty: "easy"
@@ -85,6 +85,30 @@ export const contestantGroups = [
     // Medium (Level 6-10)
     {
       id: 106,
+      question: "Ek advertisement me likha hai: \"10,000+ students already joined.\" Consumer psychology me ye primarily kis principle par kaam karta hai?",
+      options: [
+        "Scarcity",
+        "Anchoring",
+        "Social Proof",
+        "Reciprocity"
+      ],
+      answerIndex: 2,
+      difficulty: "medium"
+    },
+    {
+      id: 107,
+      question: "Ek business ke paas cash hai, inventory hai aur customers se payment receive karni baaki hai. Accounting me ye teeno broadly kis category me aa sakte hain?",
+      options: [
+        "Liabilities",
+        "Expenses",
+        "Equity only",
+        "Assets"
+      ],
+      answerIndex: 3,
+      difficulty: "medium"
+    },
+    {
+      id: 108,
       question: "Ek Instagram ad ko 1 lakh logon ne dekha, lekin bahut kam logon ne click kiya. Sabse directly kis metric ko improve karne ki zarurat ho sakti hai?",
       options: [
         "CTR",
@@ -96,37 +120,13 @@ export const contestantGroups = [
       difficulty: "medium"
     },
     {
-      id: 107,
-      question: "Website ka layout mobile screen par automatically adjust ho jata hai. Is concept ko kya kehte hain?",
-      options: [
-        "Adaptive Hosting",
-        "Responsive Design",
-        "Dynamic Coding",
-        "Flexible Programming"
-      ],
-      answerIndex: 1,
-      difficulty: "medium"
-    },
-    {
-      id: 108,
-      question: "Ek customer Rs.2,000 ka product kharidne me hesitate kar raha hai. Website par \"Only 2 left in stock\" dikhaya jata hai. Ye primarily kis psychological principle ka use hai?",
-      options: [
-        "Authority",
-        "Scarcity",
-        "Reciprocity",
-        "Consistency"
-      ],
-      answerIndex: 1,
-      difficulty: "medium"
-    },
-    {
       id: 109,
-      question: "Ek advertisement me likha hai: \"10,000+ students already joined.\" Consumer psychology me ye primarily kis principle par kaam karta hai?",
+      question: "Ek campaign me 10,000 impressions aur 500 clicks aaye. Approximate CTR kitna hai?",
       options: [
-        "Scarcity",
-        "Social Proof",
-        "Anchoring",
-        "Reciprocity"
+        "2%",
+        "5%",
+        "10%",
+        "20%"
       ],
       answerIndex: 1,
       difficulty: "medium"
@@ -136,36 +136,36 @@ export const contestantGroups = [
       question: "Ek product pehle Rs.4,999 dikhaya gaya, uske baad Rs.2,999 offer price. Rs.4,999 dekhne ke baad Rs.2,999 comparatively sasta lagta hai. Ye kis effect ka example hai?",
       options: [
         "Halo Effect",
-        "Anchoring Effect",
         "Recency Effect",
-        "Confirmation Bias"
+        "Confirmation Bias",
+        "Anchoring Effect"
       ],
-      answerIndex: 1,
+      answerIndex: 3,
       difficulty: "medium"
     },
     // Hard (Level 11-15)
     {
       id: 111,
-      question: "Ek designer ko logo banana hai jo visiting card se billboard tak quality lose kiye bina resize ho sake. Best choice kya hogi?",
+      question: "AI se answer lete waqt kaunsa prompt generally better output dega?",
       options: [
-        "Raster Graphic",
-        "Vector Graphic",
-        "JPEG Image",
-        "Screenshot"
+        "\"Jaipur ke beginners ke liye 3-month digital marketing course ka structured syllabus banao\"",
+        "\"Marketing batao\"",
+        "\"Digital marketing explain karo\"",
+        "\"Best answer do\""
       ],
-      answerIndex: 1,
+      answerIndex: 0,
       difficulty: "advanced"
     },
     {
       id: 112,
-      question: "AI se answer lete waqt kaunsa prompt generally better output dega?",
+      question: "Consumer ko \"Rs.1,000 paane\" ke comparison me \"Rs.1,000 kho dene\" ka thought zyada strongly affect karta hai. Is tendency ko kya kehte hain?",
       options: [
-        "\"Marketing batao\"",
-        "\"Digital marketing explain karo\"",
-        "\"Jaipur ke beginners ke liye 3-month digital marketing course ka structured syllabus banao\"",
-        "\"Best answer do\""
+        "Social Proof",
+        "Loss Aversion",
+        "Anchoring",
+        "Reciprocity"
       ],
-      answerIndex: 2,
+      answerIndex: 1,
       difficulty: "advanced"
     },
     {
@@ -173,35 +173,35 @@ export const contestantGroups = [
       question: "Ek ad par clicks bahut aa rahe hain aur CPC bhi low hai, lekin sales almost zero hain. Sabse pehle kis cheez ko investigate karna logical hoga?",
       options: [
         "Sirf ad ka color",
-        "Landing page aur audience relevance",
         "Followers ki total sankhya",
+        "Landing page aur audience relevance",
         "Logo ka size"
       ],
-      answerIndex: 1,
+      answerIndex: 2,
       difficulty: "advanced"
     },
     {
       id: 114,
-      question: "Ek business ke paas cash hai, inventory hai aur customers se payment receive karni baaki hai. Accounting me ye teeno broadly kis category me aa sakte hain?",
+      question: "Ek company AI se candidates ke resumes automatically shortlist kar rahi hai. Agar historical hiring data biased tha, to sabse important potential risk kya hai?",
       options: [
-        "Assets",
-        "Liabilities",
-        "Expenses",
-        "Equity only"
+        "AI computer ko slow kar dega",
+        "Resume ka format automatically PDF ho jayega",
+        "Internet speed kam ho jayegi",
+        "AI existing bias ko reproduce kar sakta hai"
       ],
-      answerIndex: 0,
+      answerIndex: 3,
       difficulty: "advanced"
     },
     {
       id: 115,
-      question: "Ek customer ko Rs.500 ka product expensive lag raha hai. Uske paas hi Rs.1,500 ka premium option dikha diya gaya, jisse Rs.500 wala reasonable lagne laga. Ye kis psychological concept se sabse closely related hai?",
+      question: "Ek business ne ad ka CTR double kar diya, lekin conversion rate half ho gaya. Agar baaki factors approximately same rahein, to sabse reasonable interpretation kya hai?",
       options: [
-        "Anchoring",
-        "Reciprocity",
-        "Loss Aversion",
-        "Mere Exposure"
+        "Campaign definitely double profitable hua",
+        "Zyada clicks aaye, lekin traffic ki quality/relevance kam ho sakti hai",
+        "CTR aur conversion ka koi relation hi nahi",
+        "Website ka SEO automatically improve hua"
       ],
-      answerIndex: 0,
+      answerIndex: 1,
       difficulty: "advanced"
     }
   ],
@@ -211,75 +211,75 @@ export const contestantGroups = [
     // Easy (Level 1-5)
     {
       id: 201,
-      question: "Ek video me ek scene se doosre scene ke beech smooth visual change add kiya gaya. Ise kya kehte hain?",
+      question: "Ek brand baar-baar same logo, colors aur visual style use karta hai. Isse consumer ke mind me primarily kya build hota hai?",
       options: [
-        "Transition",
-        "Transformation",
-        "Rendering",
-        "Correction"
+        "Conversion Rate",
+        "Brand Recognition",
+        "Search Ranking",
+        "Ad Frequency only"
       ],
-      answerIndex: 0,
+      answerIndex: 1,
       difficulty: "easy"
     },
     {
       id: 202,
-      question: "Kisi job me \"Remote Position\" likha hai. Iska sabse appropriate meaning kya hai?",
+      question: "Ek advertisement ko 50,000 baar screen par display kiya gaya. Ye number generally kya represent karta hai?",
       options: [
-        "Sirf night shift",
-        "Office se door location se kaam karna",
-        "Temporary job",
-        "Freelancing hi karna"
+        "Reach",
+        "Clicks",
+        "Conversions",
+        "Impressions"
       ],
-      answerIndex: 1,
+      answerIndex: 3,
       difficulty: "easy"
     },
     {
       id: 203,
-      question: "Website ka basic content aur structure primarily kis technology se define hota hai?",
+      question: "Accounting me business ko supplier ka paisa dena baaki hai. Supplier generally business ke liye kya hoga?",
       options: [
-        "CSS",
-        "HTML",
-        "JavaScript",
-        "SQL"
+        "Creditor",
+        "Debtor",
+        "Asset",
+        "Revenue"
       ],
-      answerIndex: 1,
+      answerIndex: 0,
       difficulty: "easy"
     },
     {
       id: 204,
-      question: "Ek advertisement ko 50,000 baar screen par display kiya gaya. Ye number generally kya represent karta hai?",
+      question: "\"Free Trial - No Credit Card Required\" likhne ka psychological benefit sabse likely kya hai?",
       options: [
-        "Reach",
-        "Impressions",
-        "Clicks",
-        "Conversions"
+        "Product automatically premium banana",
+        "SEO ranking double karna",
+        "Perceived risk aur friction kam karna",
+        "Customer ko confuse karna"
       ],
-      answerIndex: 1,
+      answerIndex: 2,
       difficulty: "easy"
     },
     {
       id: 205,
-      question: "Ek brand baar-baar same logo, colors aur visual style use karta hai. Isse consumer ke mind me primarily kya build hota hai?",
+      question: "\"Join 50,000+ Happy Customers\" statement mainly kis psychological trigger ko activate karta hai?",
       options: [
-        "Brand Recognition",
-        "Conversion Rate",
-        "Search Ranking",
-        "Ad Frequency only"
+        "Scarcity",
+        "Reciprocity",
+        "Loss Aversion",
+        "Social Proof"
       ],
-      answerIndex: 0,
+      answerIndex: 3,
       difficulty: "easy"
     },
     // Medium (Level 6-10)
     {
       id: 206,
-      question: "\"Free Trial - No Credit Card Required\" likhne ka psychological benefit sabse likely kya hai?",
+      question: "Ek e-commerce website par Rs.999 ka product dikhaya gaya hai instead of Rs.1,000. Is pricing ka likely psychological objective kya hai?",
       options: [
-        "Perceived risk aur friction kam karna",
-        "Product automatically premium banana",
-        "SEO ranking double karna",
-        "Customer ko confuse karna"
+        "GST avoid karna",
+        "Price ko perceptually lower feel karana",
+        "Product quality badhana",
+        "Shipping cost reduce karna"
       ],
-      answerIndex: 0,
+      answerIndex: 1,
       difficulty: "medium"
     },
     {
@@ -296,55 +296,43 @@ export const contestantGroups = [
     },
     {
       id: 208,
-      question: "Accounting me business ko supplier ka paisa dena baaki hai. Supplier generally business ke liye kya hoga?",
+      question: "Ek ad ko 1,000 unique logon ne dekha, lekin total 3,000 baar display hua. Is situation me kya most likely hai?",
       options: [
-        "Debtor",
-        "Creditor",
-        "Asset",
-        "Revenue"
+        "Reach 3,000 aur impressions 1,000",
+        "Reach aur impressions dono 3,000",
+        "Reach 1,000 aur impressions 3,000",
+        "Clicks 3,000 hain"
       ],
-      answerIndex: 1,
+      answerIndex: 2,
       difficulty: "medium"
     },
     {
       id: 209,
-      question: "Ek Excel formula ko multiple rows me same pattern ke saath apply karna hai. Sabse convenient feature kya ho sakta hai?",
+      question: "Ek marketing campaign ne Rs.10,000 ad spend karke Rs.50,000 attributed revenue generate kiya. Simple ROAS kya hoga?",
       options: [
-        "Fill Handle",
-        "Format Painter",
-        "Find & Replace",
-        "Page Layout"
+        "2x",
+        "4x",
+        "5x",
+        "10x"
       ],
-      answerIndex: 0,
+      answerIndex: 2,
       difficulty: "medium"
     },
     {
       id: 210,
-      question: "\"Join 50,000+ Happy Customers\" statement mainly kis psychological trigger ko activate karta hai?",
+      question: "Ek online course ki sales page par pehle Rs.50,000 ka \"Total Value\" dikhaya aur actual price Rs.10,000 rakha. Consumer ke price perception ko influence karne ke liye primarily kya use hua?",
       options: [
-        "Social Proof",
-        "Scarcity",
         "Reciprocity",
-        "Loss Aversion"
+        "Retargeting",
+        "Remarketing",
+        "Anchoring"
       ],
-      answerIndex: 0,
+      answerIndex: 3,
       difficulty: "medium"
     },
     // Hard (Level 11-15)
     {
       id: 211,
-      question: "Ek e-commerce website par Rs.999 ka product dikhaya gaya hai instead of Rs.1,000. Is pricing ka likely psychological objective kya hai?",
-      options: [
-        "Price ko perceptually lower feel karana",
-        "GST avoid karna",
-        "Product quality badhana",
-        "Shipping cost reduce karna"
-      ],
-      answerIndex: 0,
-      difficulty: "advanced"
-    },
-    {
-      id: 212,
       question: "Ek company \"Buy 2, Get 1 Free\" offer deti hai. Customer originally ek product lene aaya tha, lekin teen le jata hai. Business ne primarily kya increase kiya?",
       options: [
         "Average Order Value/Quantity",
@@ -356,39 +344,51 @@ export const contestantGroups = [
       difficulty: "advanced"
     },
     {
-      id: 213,
-      question: "Ek ad ko 1,000 unique logon ne dekha, lekin total 3,000 baar display hua. Is situation me kya most likely hai?",
+      id: 212,
+      question: "Ek customer product ke positive reviews padhne ke baad wahi reviews zyada notice karta hai jo uske pehle se bane opinion ko support karte hain. Ye kis cognitive bias ka example hai?",
       options: [
-        "Reach 3,000 aur impressions 1,000",
-        "Reach 1,000 aur impressions 3,000",
-        "Reach aur impressions dono 3,000",
-        "Clicks 3,000 hain"
+        "Anchoring Bias",
+        "Confirmation Bias",
+        "Survivorship Bias",
+        "Recency Bias"
       ],
       answerIndex: 1,
       difficulty: "advanced"
     },
     {
-      id: 214,
-      question: "Ek online course ki sales page par pehle Rs.50,000 ka \"Total Value\" dikhaya aur actual price Rs.10,000 rakha. Consumer ke price perception ko influence karne ke liye primarily kya use hua?",
+      id: 213,
+      question: "Ek company ka ad bahut attractive hai, lekin landing page ad me kiye promise se match nahi karta. Sabse likely problem kya hogi?",
       options: [
-        "Anchoring",
-        "Reciprocity",
-        "Retargeting",
-        "Remarketing"
+        "Conversion guaranteed increase hoga",
+        "CPC automatically zero ho jayega",
+        "Organic SEO immediately improve hoga",
+        "Clicks aa sakte hain, lekin conversions suffer kar sakte hain"
+      ],
+      answerIndex: 3,
+      difficulty: "advanced"
+    },
+    {
+      id: 214,
+      question: "AI-generated content ko directly publish karne se pehle human review ka sabse strong reason kya hai?",
+      options: [
+        "AI output factually incorrect ya contextually misleading ho sakta hai",
+        "AI hamesha spelling mistakes karta hai",
+        "AI internet use hi nahi kar sakta",
+        "AI sirf English likh sakta hai"
       ],
       answerIndex: 0,
       difficulty: "advanced"
     },
     {
       id: 215,
-      question: "Ek graphic designer print ke liye design bana raha hai. Generally print workflow me kaunsa color model zyada relevant hota hai?",
+      question: "Do offers hain: Offer A - Rs.1,000 ki direct Rs.200 discount. Offer B - Rs.1,000 ke product ke saath \"Rs.200 value ka FREE gift\". Similar economic value ke bawajood kuch consumers Offer B prefer kar sakte hain. Best explanation kya hai?",
       options: [
-        "RGB",
-        "CMYK",
-        "HEX",
-        "HSL"
+        "Free product ki accounting nahi hoti",
+        "Discount illegal hota hai",
+        "\"Free\" word ki perceived psychological value disproportionately high ho sakti hai",
+        "Gift ki value hamesha Rs.200 se zyada hoti hai"
       ],
-      answerIndex: 1,
+      answerIndex: 2,
       difficulty: "advanced"
     }
   ],
@@ -398,115 +398,30 @@ export const contestantGroups = [
     // Easy (Level 1-5)
     {
       id: 301,
-      question: "Ek video ko edit karne ke baad final MP4 file generate karne ke process ko kya kahenge?",
+      question: "Customer website par \"Book Your Free Demo\" button click karta hai. Ye button marketing terminology me kya hai?",
       options: [
-        "Export",
-        "Import",
-        "Transition",
-        "Timeline"
+        "CTR",
+        "CPC",
+        "CTA",
+        "CRM"
       ],
-      answerIndex: 0,
+      answerIndex: 2,
       difficulty: "easy"
     },
     {
       id: 302,
-      question: "Ek AI tool ko diya gaya instruction generally kya kehlata hai?",
+      question: "\"Offer Ends Tonight\" likhne ka primary psychological purpose kya hai?",
       options: [
-        "Prompt",
-        "Command Line",
-        "Algorithm",
-        "Dataset"
+        "Authority establish karna",
+        "Social Proof create karna",
+        "Brand Recall create karna",
+        "Urgency create karna"
       ],
-      answerIndex: 0,
+      answerIndex: 3,
       difficulty: "easy"
     },
     {
       id: 303,
-      question: "Ek business chahta hai ki Google search me uski website naturally better visible ho. Kis field par focus korea?",
-      options: [
-        "SEO",
-        "SEM only",
-        "SMM only",
-        "CRM"
-      ],
-      answerIndex: 0,
-      difficulty: "easy"
-    },
-    {
-      id: 304,
-      question: "Customer website par \"Book Your Free Demo\" button click karta hai. Ye button marketing terminology me kya hai?",
-      options: [
-        "CTA",
-        "CTR",
-        "CPC",
-        "CRM"
-      ],
-      answerIndex: 0,
-      difficulty: "easy"
-    },
-    {
-      id: 305,
-      question: "\"Offer Ends Tonight\" likhne ka primary psychological purpose kya hai?",
-      options: [
-        "Urgency create karna",
-        "Authority establish karna",
-        "Social Proof create karna",
-        "Brand Recall create karna"
-      ],
-      answerIndex: 0,
-      difficulty: "easy"
-    },
-    // Medium (Level 6-10)
-    {
-      id: 306,
-      question: "Ek architecture firm building ka precise 2D floor plan banana chahti hai. Sabse relevant software category kya hogi?",
-      options: [
-        "CAD Software",
-        "Video Editing Software",
-        "Accounting Software",
-        "CRM Software"
-      ],
-      answerIndex: 0,
-      difficulty: "medium"
-    },
-    {
-      id: 307,
-      question: "Ek customer Rs.10,000 ka course ek saath pay nahi karna chahta, lekin Rs.999/month attractive lagta hai. Ye presentation mainly kis cheez ko reduce karti hai?",
-      options: [
-        "Perceived immediate financial burden",
-        "Total course duration",
-        "Course syllabus",
-        "Customer ki income"
-      ],
-      answerIndex: 0,
-      difficulty: "medium"
-    },
-    {
-      id: 308,
-      question: "Ek brand customer ko pehle free useful e-book deta hai aur baad me paid course offer karta hai. Consumer psychology me ye kis principle se related ho sakta hai?",
-      options: [
-        "Reciprocity",
-        "Scarcity",
-        "Anchoring",
-        "Loss Aversion"
-      ],
-      answerIndex: 0,
-      difficulty: "medium"
-    },
-    {
-      id: 309,
-      question: "Job interview me candidate ko kisi skill ka answer nahi pata. Best professional approach kya hogi?",
-      options: [
-        "Confidently galat answer dena",
-        "Honest rehkar learning approach explain karna",
-        "Question ignore karna",
-        "Interviewer ko question change karne bolna"
-      ],
-      answerIndex: 1,
-      difficulty: "medium"
-    },
-    {
-      id: 310,
       question: "Ek product ke 4.9-star reviews dekhkar customer ka trust increase hota hai. Ye primarily kis principle ka example hai?",
       options: [
         "Social Proof",
@@ -515,35 +430,132 @@ export const contestantGroups = [
         "Loss Aversion"
       ],
       answerIndex: 0,
+      difficulty: "easy"
+    },
+    {
+      id: 304,
+      question: "Ek brand customer ko pehle free useful e-book deta hai aur baad me paid course offer karta hai. Consumer psychology me ye kis principle se related ho sakta hai?",
+      options: [
+        "Scarcity",
+        "Reciprocity",
+        "Anchoring",
+        "Loss Aversion"
+      ],
+      answerIndex: 1,
+      difficulty: "easy"
+    },
+    {
+      id: 305,
+      question: "Ek customer Rs.10,000 ka course ek saath pay nahi karna chahta, lekin Rs.999/month attractive lagta hai. Ye presentation mainly kis cheez ko reduce karti hai?",
+      options: [
+        "Perceived immediate financial burden",
+        "Total course duration",
+        "Course syllabus",
+        "Customer ki income"
+      ],
+      answerIndex: 0,
+      difficulty: "easy"
+    },
+    // Medium (Level 6-10)
+    {
+      id: 306,
+      question: "Ek AI tool ko diya gaya instruction generally kya kehlata hai?",
+      options: [
+        "Command Line",
+        "Algorithm",
+        "Dataset",
+        "Prompt"
+      ],
+      answerIndex: 3,
+      difficulty: "medium"
+    },
+    {
+      id: 307,
+      question: "Ek expensive restaurant menu me Rs.5,000 ki dish sabse upar rakhi gayi. Customer Rs.2,000 ki dish choose karta hai aur use reasonable samajhta hai. Rs.5,000 wali dish ne kya role play kiya?",
+      options: [
+        "Conversion",
+        "Anchor",
+        "Retargeting",
+        "Lead Magnet"
+      ],
+      answerIndex: 1,
+      difficulty: "medium"
+    },
+    {
+      id: 308,
+      question: "Customer Rs.20,000 lose hone ke fear se action leta hai, jabki Rs.20,000 gain karne ka chance usse utna motivate nahi karta. Ye kya hai?",
+      options: [
+        "Anchoring",
+        "Authority Bias",
+        "Loss Aversion",
+        "Social Proof"
+      ],
+      answerIndex: 2,
+      difficulty: "medium"
+    },
+    {
+      id: 309,
+      question: "Ek company ke paas 100 leads aayi aur 10 customers bane. Lead-to-customer conversion rate kya hai?",
+      options: [
+        "1%",
+        "5%",
+        "10%",
+        "20%"
+      ],
+      answerIndex: 2,
+      difficulty: "medium"
+    },
+    {
+      id: 310,
+      question: "Ek customer checkout tak pahunch gaya, lekin last moment par unexpected Rs.500 delivery charge dekhkar purchase cancel kar diya. Sabse likely UX/psychology issue kya hai?",
+      options: [
+        "Social Proof",
+        "Authority Bias",
+        "Brand Recall",
+        "Unexpected cost/friction"
+      ],
+      answerIndex: 3,
       difficulty: "medium"
     },
     // Hard (Level 11-15)
     {
       id: 311,
-      question: "Ek website ke checkout page par bahut saare unnecessary form fields hain. Unhe kam karne se conversion kyon improve ho sakta hai?",
+      question: "Ek AI model confidently ek aisi factual information generate karta hai jo actually incorrect hai. Is phenomenon ko commonly kya kehte hain?",
       options: [
-        "User friction reduce hoti hai",
-        "SEO automatically double hota hai",
-        "Product price kam ho jata hai",
-        "Ad CPC zero ho jata hai"
+        "Hallucination",
+        "Overfitting",
+        "Automation",
+        "Rendering"
       ],
       answerIndex: 0,
       difficulty: "advanced"
     },
     {
       id: 312,
-      question: "Customer Rs.20,000 lose hone ke fear se action leta hai, jabki Rs.20,000 gain karne ka chance usse utna motivate nahi karta. Ye kya hai?",
+      question: "A/B testing me website ke do versions test karne ka primary objective kya hota hai?",
       options: [
-        "Loss Aversion",
-        "Anchoring",
-        "Authority Bias",
-        "Social Proof"
+        "Dono websites ko Google par rank karana",
+        "Identify karna ki kaunsa version target metric par better perform karta hai",
+        "Website ka backup banana",
+        "Competitor ki website copy karna"
       ],
-      answerIndex: 0,
+      answerIndex: 1,
       difficulty: "advanced"
     },
     {
       id: 313,
+      question: "Ek company product ko \"Most Popular\" label karke three pricing plans ke beech highlight karti hai. Iska likely psychological objective kya hai?",
+      options: [
+        "Product ki manufacturing cost reduce karna",
+        "SEO improve karna",
+        "Customer ko ek preferred choice ki taraf guide karna",
+        "Accounting simplify karna"
+      ],
+      answerIndex: 2,
+      difficulty: "advanced"
+    },
+    {
+      id: 314,
       question: "Ek ad ka CTR high hai aur conversion rate bhi high hai, lekin business phir bhi loss me hai. Sabse logical reason kya ho sakta hai?",
       options: [
         "Customer acquisition cost profit margin se zyada hai",
@@ -555,27 +567,15 @@ export const contestantGroups = [
       difficulty: "advanced"
     },
     {
-      id: 314,
-      question: "Ek expensive restaurant menu me Rs.5,000 ki dish sabse upar rakhi gayi. Customer Rs.2,000 ki dish choose karta hai aur use reasonable samajhta hai. Rs.5,000 wali dish ne kya role play kiya?",
-      options: [
-        "Anchor",
-        "Conversion",
-        "Retargeting",
-        "Lead Magnet"
-      ],
-      answerIndex: 0,
-      difficulty: "advanced"
-    },
-    {
       id: 315,
-      question: "Ek customer checkout tak pahunch gaya, lekin last moment par unexpected Rs.500 delivery charge dekhkar purchase cancel kar diya. Sabse likely UX/psychology issue kya hai?",
+      question: "Ek subscription company ke paas do options hain: Plan A - Rs.999/month, Cancel Anytime. Plan B - Rs.9,999/year, \"Save Rs.1,989\". Agar company annual plan ko strategically highlight karti hai, to business ka likely objective kya hai?",
       options: [
-        "Unexpected cost/friction",
-        "Social Proof",
-        "Authority Bias",
-        "Brand Recall"
+        "Customer ko monthly plan hi choose karwana",
+        "Website traffic reduce karna",
+        "Product ki manufacturing cost badhana",
+        "Customer commitment aur upfront revenue increase karna"
       ],
-      answerIndex: 0,
+      answerIndex: 3,
       difficulty: "advanced"
     }
   ]
