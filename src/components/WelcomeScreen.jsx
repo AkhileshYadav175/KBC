@@ -59,7 +59,7 @@ export default function WelcomeScreen({ onStartGame }) {
           <span className="text-gold-gradient"> THE DIGITAL CHALLENGE</span>
         </h1>
         <p className="text-sm mb-6 max-w-md mx-auto" style={{ color: "var(--text-muted)", lineHeight: 1.5 }}>
-          TEST YOUR KNOWLEDGE IN IT INDUSTRY WITH IS HIGH STACKE ROUNDS
+          PUT YOUR IT KNOWLEDGE TO THE TEST IN THESE HIGH-STAKES ROUNDS
         </p>
 
         <form onSubmit={handleStart} className="max-w-sm mx-auto flex flex-col gap-md">
