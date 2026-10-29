@@ -19,439 +19,439 @@ export const prizeMoneyMap = [
 export const safeZoneIndices = [4, 9, 14]; // index in prizeMoneyMap
 
 export const contestantGroups = [
-  // --- Contestant 1 Group ---
+  // --- Set 1 ---
   [
     // Easy (Level 1-5)
     {
       id: 101,
-      question: "Ek website ka layout mobile screen par automatically adjust ho jata hai. Is concept ko kya kehte hain?",
+      question: "Tally software kis company ne develop kiya hai?",
       options: [
-        "Responsive Design",
-        "Adaptive Hosting",
-        "Dynamic Coding",
-        "Flexible Programming"
+        "Coral Software",
+        "Microsoft",
+        "Tally Solutions",
+        "None of the Above"
       ],
-      answerIndex: 0,
+      answerIndex: 2,
       difficulty: "easy"
     },
     {
       id: 102,
-      question: "Ek video ke beech ka unwanted 5-second portion remove karna hai. Sabse appropriate editing action kya hoga?",
+      question: "Tally mein user ka data kis directory mein store hota hai?",
       options: [
-        "Trim",
-        "Transition",
-        "Cut",
-        "Crop"
+        "Bin",
+        "Sub",
+        "Data",
+        "Database"
       ],
       answerIndex: 2,
       difficulty: "easy"
     },
     {
       id: 103,
-      question: "Agar ek customer product ko cart me add karta hai, lekin purchase complete nahi karta, ise kya kehte hain?",
+      question: "Tally mein company select karne ke liye kaunsi shortcut key use hoti hai?",
       options: [
-        "Bounce Rate",
-        "Conversion Drop",
-        "Customer Exit",
-        "Cart Abandonment"
-      ],
-      answerIndex: 3,
-      difficulty: "easy"
-    },
-    {
-      id: 104,
-      question: "Ek restaurant Rs.500 ki dish ko Rs.499 me list karta hai. Ye pricing strategy mainly kis psychological effect ka use karti hai?",
-      options: [
-        "Premium Pricing",
-        "Charm Pricing",
-        "Penetration Pricing",
-        "Cost-Based Pricing"
+        "Alt + F1",
+        "Alt + F3",
+        "F1",
+        "F4"
       ],
       answerIndex: 1,
       difficulty: "easy"
     },
     {
-      id: 105,
-      question: "Ek customer Rs.2,000 ka product kharidne me hesitate kar raha hai. Website par \"Only 2 left in stock\" dikhaya jata hai. Ye primarily kis psychological principle ka use hai?",
+      id: 104,
+      question: "Tally mein nayi company banane ke liye kaunsa option use hota hai?",
       options: [
-        "Scarcity",
-        "Authority",
-        "Reciprocity",
-        "Consistency"
+        "New Company",
+        "Start Company",
+        "Create",
+        "Create Company"
       ],
-      answerIndex: 0,
+      answerIndex: 2,
+      difficulty: "easy"
+    },
+    {
+      id: 105,
+      question: "Tally mein naya ledger banane ke liye kaunsi shortcut key use hoti hai?",
+      options: [
+        "Alt + A",
+        "Alt + C",
+        "Alt + X",
+        "Alt + D"
+      ],
+      answerIndex: 1,
       difficulty: "easy"
     },
     // Medium (Level 6-10)
     {
       id: 106,
-      question: "Ek advertisement me likha hai: \"10,000+ students already joined.\" Consumer psychology me ye primarily kis principle par kaam karta hai?",
+      question: "Tally mein date period change karne ke liye kaunsi shortcut key use hoti hai?",
       options: [
-        "Scarcity",
-        "Anchoring",
-        "Social Proof",
-        "Reciprocity"
+        "Alt + F2",
+        "Alt + F1",
+        "Ctrl + F2",
+        "Ctrl + F1"
       ],
-      answerIndex: 2,
+      answerIndex: 0,
       difficulty: "medium"
     },
     {
       id: 107,
-      question: "Ek business ke paas cash hai, inventory hai aur customers se payment receive karni baaki hai. Accounting me ye teeno broadly kis category me aa sakte hain?",
+      question: "Ek bank account se doosre bank account mein amount transfer karne ke liye kaunsa voucher use hota hai?",
       options: [
-        "Liabilities",
-        "Expenses",
-        "Equity only",
-        "Assets"
+        "Payment",
+        "Receipt",
+        "Journal",
+        "Contra"
       ],
       answerIndex: 3,
       difficulty: "medium"
     },
     {
       id: 108,
-      question: "Ek Instagram ad ko 1 lakh logon ne dekha, lekin bahut kam logon ne click kiya. Sabse directly kis metric ko improve karne ki zarurat ho sakti hai?",
+      question: "Salary, rent ya interest paid ki entry kis voucher mein hoti hai?",
       options: [
-        "CTR",
-        "CPC",
-        "ROAS",
-        "Conversion Rate"
+        "Payment",
+        "Contra",
+        "Receipt",
+        "Journal"
       ],
       answerIndex: 0,
       difficulty: "medium"
     },
     {
       id: 109,
-      question: "Ek campaign me 10,000 impressions aur 500 clicks aaye. Approximate CTR kitna hai?",
+      question: "Tally mein credit purchase record karne ke liye kaunsa voucher use hota hai?",
       options: [
-        "2%",
-        "5%",
-        "10%",
-        "20%"
+        "F5: Payment",
+        "F9: Purchase",
+        "F6: Receipt",
+        "F7: Journal"
       ],
       answerIndex: 1,
       difficulty: "medium"
     },
     {
       id: 110,
-      question: "Ek product pehle Rs.4,999 dikhaya gaya, uske baad Rs.2,999 offer price. Rs.4,999 dekhne ke baad Rs.2,999 comparatively sasta lagta hai. Ye kis effect ka example hai?",
+      question: "Tally mein credit sales record karne ke liye kaunsa voucher use hota hai?",
       options: [
-        "Halo Effect",
-        "Recency Effect",
-        "Confirmation Bias",
-        "Anchoring Effect"
+        "F5: Payment",
+        "F7: Journal",
+        "F8: Sales",
+        "F6: Receipt"
       ],
-      answerIndex: 3,
+      answerIndex: 2,
       difficulty: "medium"
     },
     // Hard (Level 11-15)
     {
       id: 111,
-      question: "AI se answer lete waqt kaunsa prompt generally better output dega?",
+      question: "Balance Sheet ki sahi accounting equation kaunsi hai?",
       options: [
-        "\"Jaipur ke beginners ke liye 3-month digital marketing course ka structured syllabus banao\"",
-        "\"Marketing batao\"",
-        "\"Digital marketing explain karo\"",
-        "\"Best answer do\""
+        "Assets = Liabilities + Capital",
+        "Liabilities = Assets + Capital",
+        "Capital = Assets + Liabilities",
+        "Assets = Capital − Liabilities"
       ],
       answerIndex: 0,
       difficulty: "advanced"
     },
     {
       id: 112,
-      question: "Consumer ko \"Rs.1,000 paane\" ke comparison me \"Rs.1,000 kho dene\" ka thought zyada strongly affect karta hai. Is tendency ko kya kehte hain?",
+      question: "Accounting mein supplier ka account kis group mein aata hai?",
       options: [
-        "Social Proof",
-        "Loss Aversion",
-        "Anchoring",
-        "Reciprocity"
-      ],
-      answerIndex: 1,
-      difficulty: "advanced"
-    },
-    {
-      id: 113,
-      question: "Ek ad par clicks bahut aa rahe hain aur CPC bhi low hai, lekin sales almost zero hain. Sabse pehle kis cheez ko investigate karna logical hoga?",
-      options: [
-        "Sirf ad ka color",
-        "Followers ki total sankhya",
-        "Landing page aur audience relevance",
-        "Logo ka size"
+        "Supplier",
+        "Sundry Debtors",
+        "Sundry Creditors",
+        "Sundry Customers"
       ],
       answerIndex: 2,
       difficulty: "advanced"
     },
     {
-      id: 114,
-      question: "Ek company AI se candidates ke resumes automatically shortlist kar rahi hai. Agar historical hiring data biased tha, to sabse important potential risk kya hai?",
+      id: 113,
+      question: "Kaunsa financial statement kisi specific date par business ki financial position dikhata hai?",
       options: [
-        "AI computer ko slow kar dega",
-        "Resume ka format automatically PDF ho jayega",
-        "Internet speed kam ho jayegi",
-        "AI existing bias ko reproduce kar sakta hai"
+        "Bank and Cash Balances",
+        "Individual Account Balances",
+        "Summary of All Transactions",
+        "Balance Sheet"
       ],
       answerIndex: 3,
       difficulty: "advanced"
     },
     {
-      id: 115,
-      question: "Ek business ne ad ka CTR double kar diya, lekin conversion rate half ho gaya. Agar baaki factors approximately same rahein, to sabse reasonable interpretation kya hai?",
+      id: 114,
+      question: "Business ke liye kharida gaya computer kis type ka asset hai?",
       options: [
-        "Campaign definitely double profitable hua",
-        "Zyada clicks aaye, lekin traffic ki quality/relevance kam ho sakti hai",
-        "CTR aur conversion ka koi relation hi nahi",
-        "Website ka SEO automatically improve hua"
+        "Fixed Asset",
+        "Direct Expense",
+        "Current Asset",
+        "None"
+      ],
+      answerIndex: 0,
+      difficulty: "advanced"
+    },
+    {
+      id: 115,
+      question: "Business ne bank se ₹10,000 cash withdraw kiye. Kaunsa voucher use hoga?",
+      options: [
+        "Payment",
+        "Contra",
+        "Receipt",
+        "Post-Dated"
       ],
       answerIndex: 1,
       difficulty: "advanced"
     }
   ],
 
-  // --- Contestant 2 Group ---
+  // --- Set 2 ---
   [
     // Easy (Level 1-5)
     {
       id: 201,
-      question: "Ek brand baar-baar same logo, colors aur visual style use karta hai. Isse consumer ke mind me primarily kya build hota hai?",
+      question: "Tally kis type ka software hai?",
       options: [
-        "Conversion Rate",
-        "Brand Recognition",
-        "Search Ranking",
-        "Ad Frequency only"
-      ],
-      answerIndex: 1,
-      difficulty: "easy"
-    },
-    {
-      id: 202,
-      question: "Ek advertisement ko 50,000 baar screen par display kiya gaya. Ye number generally kya represent karta hai?",
-      options: [
-        "Reach",
-        "Clicks",
-        "Conversions",
-        "Impressions"
-      ],
-      answerIndex: 3,
-      difficulty: "easy"
-    },
-    {
-      id: 203,
-      question: "Accounting me business ko supplier ka paisa dena baaki hai. Supplier generally business ke liye kya hoga?",
-      options: [
-        "Creditor",
-        "Debtor",
-        "Asset",
-        "Revenue"
+        "Computerized Accounting",
+        "Manual Accounting",
+        "Operating System",
+        "Programming Language"
       ],
       answerIndex: 0,
       difficulty: "easy"
     },
     {
-      id: 204,
-      question: "\"Free Trial - No Credit Card Required\" likhne ka psychological benefit sabse likely kya hai?",
+      id: 202,
+      question: "Tally se bahar nikalne ke liye kaunsa option use hota hai?",
       options: [
-        "Product automatically premium banana",
-        "SEO ranking double karna",
-        "Perceived risk aur friction kam karna",
-        "Customer ko confuse karna"
+        "Quit",
+        "Exit",
+        "Close",
+        "Shut Company"
       ],
-      answerIndex: 2,
+      answerIndex: 0,
+      difficulty: "easy"
+    },
+    {
+      id: 203,
+      question: "Tally mein nayi company create karne ki shortcut key kya hai?",
+      options: [
+        "Ctrl + F3",
+        "Alt + F3",
+        "Ctrl + F4",
+        "Alt + F4"
+      ],
+      answerIndex: 1,
+      difficulty: "easy"
+    },
+    {
+      id: 204,
+      question: "Pehle se bani company mein changes karne ke liye kaunsa option use hota hai?",
+      options: [
+        "Alter",
+        "Select Company",
+        "Shut Company",
+        "Modify Company"
+      ],
+      answerIndex: 0,
       difficulty: "easy"
     },
     {
       id: 205,
-      question: "\"Join 50,000+ Happy Customers\" statement mainly kis psychological trigger ko activate karta hai?",
+      question: "Tally mein kitne predefined ledgers hote hain?",
       options: [
-        "Scarcity",
-        "Reciprocity",
-        "Loss Aversion",
-        "Social Proof"
+        "One",
+        "Two",
+        "Four",
+        "Three"
       ],
-      answerIndex: 3,
+      answerIndex: 1,
       difficulty: "easy"
     },
     // Medium (Level 6-10)
     {
       id: 206,
-      question: "Ek e-commerce website par Rs.999 ka product dikhaya gaya hai instead of Rs.1,000. Is pricing ka likely psychological objective kya hai?",
+      question: "Tally mein calculator open karne ke liye kaunsi shortcut key use hoti hai?",
       options: [
-        "GST avoid karna",
-        "Price ko perceptually lower feel karana",
-        "Product quality badhana",
-        "Shipping cost reduce karna"
+        "Ctrl + P",
+        "Ctrl + C",
+        "Ctrl + N",
+        "Ctrl + A"
       ],
-      answerIndex: 1,
+      answerIndex: 2,
       difficulty: "medium"
     },
     {
       id: 207,
-      question: "Ek ad me celebrity kisi product ko recommend karta hai. Consumer psychology me ye primarily kis principle se related ho sakta hai?",
+      question: "Machinery par depreciation ki entry kis voucher mein hoti hai?",
       options: [
-        "Authority",
-        "Scarcity",
-        "Loss Aversion",
-        "Reciprocity"
+        "Payment",
+        "Contra",
+        "Receipt",
+        "Journal"
       ],
-      answerIndex: 0,
+      answerIndex: 3,
       difficulty: "medium"
     },
     {
       id: 208,
-      question: "Ek ad ko 1,000 unique logon ne dekha, lekin total 3,000 baar display hua. Is situation me kya most likely hai?",
+      question: "Closing stock generally kahan show hota hai?",
       options: [
-        "Reach 3,000 aur impressions 1,000",
-        "Reach aur impressions dono 3,000",
-        "Reach 1,000 aur impressions 3,000",
-        "Clicks 3,000 hain"
+        "Journal Voucher",
+        "Trial Balance",
+        "Profit & Loss Account",
+        "Balance Sheet"
       ],
-      answerIndex: 2,
+      answerIndex: 3,
       difficulty: "medium"
     },
     {
       id: 209,
-      question: "Ek marketing campaign ne Rs.10,000 ad spend karke Rs.50,000 attributed revenue generate kiya. Simple ROAS kya hoga?",
+      question: "Salary Account generally kis group mein aata hai?",
       options: [
-        "2x",
-        "4x",
-        "5x",
-        "10x"
+        "Direct Incomes",
+        "Direct Expenses",
+        "Indirect Incomes",
+        "Indirect Expenses"
       ],
-      answerIndex: 2,
+      answerIndex: 3,
       difficulty: "medium"
     },
     {
       id: 210,
-      question: "Ek online course ki sales page par pehle Rs.50,000 ka \"Total Value\" dikhaya aur actual price Rs.10,000 rakha. Consumer ke price perception ko influence karne ke liye primarily kya use hua?",
+      question: "Customer se payment receive hone ki entry kis voucher mein hoti hai?",
       options: [
-        "Reciprocity",
-        "Retargeting",
-        "Remarketing",
-        "Anchoring"
+        "Payment",
+        "Contra",
+        "Receipt",
+        "Journal"
       ],
-      answerIndex: 3,
+      answerIndex: 2,
       difficulty: "medium"
     },
     // Hard (Level 11-15)
     {
       id: 211,
-      question: "Ek company \"Buy 2, Get 1 Free\" offer deti hai. Customer originally ek product lene aaya tha, lekin teen le jata hai. Business ne primarily kya increase kiya?",
+      question: "Sales, Purchases aur Discount Allowed jaise accounts kis category mein aate hain?",
       options: [
-        "Average Order Value/Quantity",
-        "Bounce Rate",
-        "CPC",
-        "Search Ranking"
+        "Personal Accounts",
+        "Real Accounts",
+        "Nominal Accounts",
+        "Bank Accounts Only"
       ],
-      answerIndex: 0,
+      answerIndex: 2,
       difficulty: "advanced"
     },
     {
       id: 212,
-      question: "Ek customer product ke positive reviews padhne ke baad wahi reviews zyada notice karta hai jo uske pehle se bane opinion ko support karte hain. Ye kis cognitive bias ka example hai?",
+      question: "Kaunsa reserved group liabilities ke under aata hai?",
       options: [
-        "Anchoring Bias",
-        "Confirmation Bias",
-        "Survivorship Bias",
-        "Recency Bias"
-      ],
-      answerIndex: 1,
-      difficulty: "advanced"
-    },
-    {
-      id: 213,
-      question: "Ek company ka ad bahut attractive hai, lekin landing page ad me kiye promise se match nahi karta. Sabse likely problem kya hogi?",
-      options: [
-        "Conversion guaranteed increase hoga",
-        "CPC automatically zero ho jayega",
-        "Organic SEO immediately improve hoga",
-        "Clicks aa sakte hain, lekin conversions suffer kar sakte hain"
-      ],
-      answerIndex: 3,
-      difficulty: "advanced"
-    },
-    {
-      id: 214,
-      question: "AI-generated content ko directly publish karne se pehle human review ka sabse strong reason kya hai?",
-      options: [
-        "AI output factually incorrect ya contextually misleading ho sakta hai",
-        "AI hamesha spelling mistakes karta hai",
-        "AI internet use hi nahi kar sakta",
-        "AI sirf English likh sakta hai"
+        "Capital A/c",
+        "Fixed Assets",
+        "Investment",
+        "Sundry Debtors"
       ],
       answerIndex: 0,
       difficulty: "advanced"
     },
     {
-      id: 215,
-      question: "Do offers hain: Offer A - Rs.1,000 ki direct Rs.200 discount. Offer B - Rs.1,000 ke product ke saath \"Rs.200 value ka FREE gift\". Similar economic value ke bawajood kuch consumers Offer B prefer kar sakte hain. Best explanation kya hai?",
+      id: 213,
+      question: "Business ki financial position dikhane wala statement kaunsa hai?",
       options: [
-        "Free product ki accounting nahi hoti",
-        "Discount illegal hota hai",
-        "\"Free\" word ki perceived psychological value disproportionately high ho sakti hai",
-        "Gift ki value hamesha Rs.200 se zyada hoti hai"
+        "Sales Register",
+        "Purchase Register",
+        "Balance Sheet",
+        "Cash Voucher"
       ],
       answerIndex: 2,
+      difficulty: "advanced"
+    },
+    {
+      id: 214,
+      question: "Tally mein company ki information change karne ke liye kaunsa option use hota hai?",
+      options: [
+        "Company Info > Split Company Data",
+        "None of These",
+        "Company Info > Alter",
+        "Company Info > Backup"
+      ],
+      answerIndex: 2,
+      difficulty: "advanced"
+    },
+    {
+      id: 215,
+      question: "Business ne ₹85,000 cash HDFC Bank account mein deposit kiye. Kaunsa voucher use hoga?",
+      options: [
+        "Payment",
+        "Contra",
+        "Sales",
+        "Journal"
+      ],
+      answerIndex: 1,
       difficulty: "advanced"
     }
   ],
 
-  // --- Contestant 3 Group ---
+  // --- Set 3 ---
   [
     // Easy (Level 1-5)
     {
       id: 301,
-      question: "Customer website par \"Book Your Free Demo\" button click karta hai. Ye button marketing terminology me kya hai?",
+      question: "Tally mein ledgers aur groups create karne ke liye kaunsa menu use hota hai?",
       options: [
-        "CTR",
-        "CPC",
-        "CTA",
-        "CRM"
+        "Inventory Master",
+        "Accounting Master",
+        "Company Info",
+        "Account Info"
       ],
-      answerIndex: 2,
+      answerIndex: 3,
       difficulty: "easy"
     },
     {
       id: 302,
-      question: "\"Offer Ends Tonight\" likhne ka primary psychological purpose kya hai?",
+      question: "Tally mein Sales Voucher ke liye kaunsi function key use hoti hai?",
       options: [
-        "Authority establish karna",
-        "Social Proof create karna",
-        "Brand Recall create karna",
-        "Urgency create karna"
+        "F5",
+        "F6",
+        "F7",
+        "F8"
       ],
       answerIndex: 3,
       difficulty: "easy"
     },
     {
       id: 303,
-      question: "Ek product ke 4.9-star reviews dekhkar customer ka trust increase hota hai. Ye primarily kis principle ka example hai?",
+      question: "Tally mein opened company ko band karne ke liye kaunsa option diya gaya hai?",
       options: [
-        "Social Proof",
-        "Anchoring",
-        "Scarcity",
-        "Loss Aversion"
-      ],
-      answerIndex: 0,
-      difficulty: "easy"
-    },
-    {
-      id: 304,
-      question: "Ek brand customer ko pehle free useful e-book deta hai aur baad me paid course offer karta hai. Consumer psychology me ye kis principle se related ho sakta hai?",
-      options: [
-        "Scarcity",
-        "Reciprocity",
-        "Anchoring",
-        "Loss Aversion"
+        "Alter Company",
+        "Close Company",
+        "Shut Company",
+        "Exit Company"
       ],
       answerIndex: 1,
       difficulty: "easy"
     },
     {
-      id: 305,
-      question: "Ek customer Rs.10,000 ka course ek saath pay nahi karna chahta, lekin Rs.999/month attractive lagta hai. Ye presentation mainly kis cheez ko reduce karti hai?",
+      id: 304,
+      question: "Gateway of Tally se Go To feature open karne ke liye kaunsi shortcut key use hoti hai?",
       options: [
-        "Perceived immediate financial burden",
-        "Total course duration",
-        "Course syllabus",
-        "Customer ki income"
+        "Alt + G",
+        "Ctrl + G",
+        "Alt + O",
+        "Alt + M"
+      ],
+      answerIndex: 0,
+      difficulty: "easy"
+    },
+    {
+      id: 305,
+      question: "Cash mein wages pay karne par kaunsa voucher use hota hai?",
+      options: [
+        "Payment",
+        "Contra",
+        "Receipt",
+        "Journal"
       ],
       answerIndex: 0,
       difficulty: "easy"
@@ -459,123 +459,310 @@ export const contestantGroups = [
     // Medium (Level 6-10)
     {
       id: 306,
-      question: "Ek AI tool ko diya gaya instruction generally kya kehlata hai?",
+      question: "Tally mein Excel data lane ke liye kaunsa option use hota hai?",
       options: [
-        "Command Line",
-        "Algorithm",
-        "Dataset",
-        "Prompt"
+        "Import",
+        "Export",
+        "Share",
+        "Data"
       ],
-      answerIndex: 3,
+      answerIndex: 0,
       difficulty: "medium"
     },
     {
       id: 307,
-      question: "Ek expensive restaurant menu me Rs.5,000 ki dish sabse upar rakhi gayi. Customer Rs.2,000 ki dish choose karta hai aur use reasonable samajhta hai. Rs.5,000 wali dish ne kya role play kiya?",
+      question: "Production ya manufacturing expenses kis group mein aate hain?",
       options: [
-        "Conversion",
-        "Anchor",
-        "Retargeting",
-        "Lead Magnet"
+        "Direct Expenses",
+        "Indirect Expenses",
+        "Miscellaneous Expenses",
+        "None of the Above"
       ],
-      answerIndex: 1,
+      answerIndex: 0,
       difficulty: "medium"
     },
     {
       id: 308,
-      question: "Customer Rs.20,000 lose hone ke fear se action leta hai, jabki Rs.20,000 gain karne ka chance usse utna motivate nahi karta. Ye kya hai?",
+      question: "Rent received ki entry kis voucher mein record hoti hai?",
       options: [
-        "Anchoring",
-        "Authority Bias",
-        "Loss Aversion",
-        "Social Proof"
+        "Payment",
+        "Contra",
+        "Receipt",
+        "Journal"
       ],
       answerIndex: 2,
       difficulty: "medium"
     },
     {
       id: 309,
-      question: "Ek company ke paas 100 leads aayi aur 10 customers bane. Lead-to-customer conversion rate kya hai?",
+      question: "Credit par furniture purchase karne ke liye kaunsa voucher use hoga?",
       options: [
-        "1%",
-        "5%",
-        "10%",
-        "20%"
+        "Purchase",
+        "Payment",
+        "Receipt",
+        "Journal"
       ],
-      answerIndex: 2,
+      answerIndex: 0,
       difficulty: "medium"
     },
     {
       id: 310,
-      question: "Ek customer checkout tak pahunch gaya, lekin last moment par unexpected Rs.500 delivery charge dekhkar purchase cancel kar diya. Sabse likely UX/psychology issue kya hai?",
+      question: "Tally mein report print karne ki shortcut key kya hai?",
       options: [
-        "Social Proof",
-        "Authority Bias",
-        "Brand Recall",
-        "Unexpected cost/friction"
+        "Alt + P",
+        "Ctrl + P",
+        "Shift + P",
+        "Alt + Ctrl + P"
       ],
-      answerIndex: 3,
+      answerIndex: 0,
       difficulty: "medium"
     },
     // Hard (Level 11-15)
     {
       id: 311,
-      question: "Ek AI model confidently ek aisi factual information generate karta hai jo actually incorrect hai. Is phenomenon ko commonly kya kehte hain?",
+      question: "Cash, inventory aur customers se receivable amount ko broadly kis category mein rakha jata hai?",
       options: [
-        "Hallucination",
-        "Overfitting",
-        "Automation",
-        "Rendering"
+        "Liabilities",
+        "Expenses",
+        "Equity Only",
+        "Assets"
       ],
-      answerIndex: 0,
+      answerIndex: 3,
       difficulty: "advanced"
     },
     {
       id: 312,
-      question: "A/B testing me website ke do versions test karne ka primary objective kya hota hai?",
+      question: "Assets aur Liabilities se Capital calculate karne ka sahi formula kya hai?",
       options: [
-        "Dono websites ko Google par rank karana",
-        "Identify karna ki kaunsa version target metric par better perform karta hai",
-        "Website ka backup banana",
-        "Competitor ki website copy karna"
+        "Capital = Assets + Liabilities",
+        "Capital = Liabilities − Assets",
+        "Capital = Assets − Liabilities",
+        "Capital = Assets × Liabilities"
       ],
-      answerIndex: 1,
+      answerIndex: 2,
       difficulty: "advanced"
     },
     {
       id: 313,
-      question: "Ek company product ko \"Most Popular\" label karke three pricing plans ke beech highlight karti hai. Iska likely psychological objective kya hai?",
+      question: "Ramesh se ₹50,000 receive hue. Kaunsa voucher use hoga?",
       options: [
-        "Product ki manufacturing cost reduce karna",
-        "SEO improve karna",
-        "Customer ko ek preferred choice ki taraf guide karna",
-        "Accounting simplify karna"
+        "Payment",
+        "Contra",
+        "Receipt",
+        "Journal"
       ],
       answerIndex: 2,
       difficulty: "advanced"
     },
     {
       id: 314,
-      question: "Ek ad ka CTR high hai aur conversion rate bhi high hai, lekin business phir bhi loss me hai. Sabse logical reason kya ho sakta hai?",
+      question: "Mahesh ko ₹25,750 pay kiye gaye. Kaunsa voucher use hoga?",
       options: [
-        "Customer acquisition cost profit margin se zyada hai",
-        "CTR high hona loss ka direct reason hai",
-        "Conversion rate kam hona chahiye",
-        "Website par logo bada hai"
+        "Payment",
+        "Contra",
+        "Receipt",
+        "Journal"
       ],
       answerIndex: 0,
       difficulty: "advanced"
     },
     {
       id: 315,
-      question: "Ek subscription company ke paas do options hain: Plan A - Rs.999/month, Cancel Anytime. Plan B - Rs.9,999/year, \"Save Rs.1,989\". Agar company annual plan ko strategically highlight karti hai, to business ka likely objective kya hai?",
+      question: "Tally ke diye gaye menu options mein Profit & Loss Account dekhne ka kaunsa path question paper mein diya gaya hai?",
       options: [
-        "Customer ko monthly plan hi choose karwana",
-        "Website traffic reduce karna",
-        "Product ki manufacturing cost badhana",
-        "Customer commitment aur upfront revenue increase karna"
+        "None of These",
+        "Gateway of Tally > Account Books > Profit & Loss A/c",
+        "Gateway of Tally > Reports > Profit & Loss A/c",
+        "Gateway of Tally > Display > Profit & Loss A/c"
       ],
       answerIndex: 3,
+      difficulty: "advanced"
+    }
+  ],
+
+  // --- Set 4 ---
+  [
+    // Easy (Level 1-5)
+    {
+      id: 401,
+      question: "Tally mein Journal Voucher create karne ke liye kaunsi shortcut key use hoti hai?",
+      options: [
+        "F4",
+        "F7",
+        "F6",
+        "F5"
+      ],
+      answerIndex: 1,
+      difficulty: "easy"
+    },
+    {
+      id: 402,
+      question: "Multiple companies open hone par ek company se doosri company mein switch karne ke liye kaunsa option use hota hai?",
+      options: [
+        "Company",
+        "Select Company",
+        "Company Info",
+        "Shut Company"
+      ],
+      answerIndex: 1,
+      difficulty: "easy"
+    },
+    {
+      id: 403,
+      question: "Kisi party ko paise pay karne ki entry kis voucher mein hoti hai?",
+      options: [
+        "Payment",
+        "Contra",
+        "Receipt",
+        "Journal"
+      ],
+      answerIndex: 0,
+      difficulty: "easy"
+    },
+    {
+      id: 404,
+      question: "Mohan ko goods sell karne ki entry kis voucher mein hoti hai?",
+      options: [
+        "Payment",
+        "Contra",
+        "Sales",
+        "Journal"
+      ],
+      answerIndex: 2,
+      difficulty: "easy"
+    },
+    {
+      id: 405,
+      question: "Building ka rent receive hone par kaunsa voucher use hota hai?",
+      options: [
+        "Payment",
+        "Contra",
+        "Receipt",
+        "Journal"
+      ],
+      answerIndex: 2,
+      difficulty: "easy"
+    },
+    // Medium (Level 6-10)
+    {
+      id: 406,
+      question: "Cash aur Bank ke beech amount transfer karne ke liye kaunsa voucher use hota hai?",
+      options: [
+        "Payment",
+        "Receipt",
+        "Journal",
+        "Contra"
+      ],
+      answerIndex: 3,
+      difficulty: "medium"
+    },
+    {
+      id: 407,
+      question: "Aapki question paper ke according, Tally start karne par pehli baar kaunsa menu dikhai deta hai?",
+      options: [
+        "Gateway of Tally",
+        "Display",
+        "Company Info",
+        "None of These"
+      ],
+      answerIndex: 2,
+      difficulty: "medium"
+    },
+    {
+      id: 408,
+      question: "Jis party se business ko paise receive karne hain, uska account kis group mein aata hai?",
+      options: [
+        "Sundry Creditors",
+        "Sundry Debtors",
+        "Fixed Assets",
+        "Direct Expenses"
+      ],
+      answerIndex: 1,
+      difficulty: "medium"
+    },
+    {
+      id: 409,
+      question: "Business ke liye purchase kiya gaya computer kis type ka asset hai?",
+      options: [
+        "Fixed Asset",
+        "Direct Expense",
+        "Current Asset",
+        "None"
+      ],
+      answerIndex: 0,
+      difficulty: "medium"
+    },
+    {
+      id: 410,
+      question: "India mein financial year ki starting date kya hai?",
+      options: [
+        "1st January",
+        "1st February",
+        "1st March",
+        "1st April"
+      ],
+      answerIndex: 3,
+      difficulty: "medium"
+    },
+    // Hard (Level 11-15)
+    {
+      id: 411,
+      question: "Personal Account ke rule ke according, receiver ko kya kiya jata hai?",
+      options: [
+        "Debit",
+        "Credit",
+        "Both",
+        "Balance Entered in Voucher"
+      ],
+      answerIndex: 0,
+      difficulty: "advanced"
+    },
+    {
+      id: 412,
+      question: "Purchase Return, Sales Return, Depreciation aur Bad Debts ki entries ke liye kaunsa voucher diya gaya hai?",
+      options: [
+        "Contra",
+        "Journal",
+        "Payment",
+        "Receipt"
+      ],
+      answerIndex: 1,
+      difficulty: "advanced"
+    },
+    {
+      id: 413,
+      question: "Bank Overdraft Account Balance Sheet ke kis side par dikhaya jata hai?",
+      options: [
+        "Liabilities > Current Liabilities",
+        "Assets > Current Liabilities",
+        "Liabilities > Loans (Liability)",
+        "Assets > Loan & Advance Assets"
+      ],
+      answerIndex: 0,
+      difficulty: "advanced"
+    },
+    {
+      id: 414,
+      question: "Business ₹5,00,000 cash se start hua. Aapki question paper mein diye gaye options mein kaunsa voucher select karna hai?",
+      options: [
+        "Payment",
+        "Contra",
+        "Sales",
+        "Journal"
+      ],
+      answerIndex: 3,
+      difficulty: "advanced"
+    },
+    {
+      id: 415,
+      question: "Agar Assets ₹8,00,000 aur Liabilities ₹3,00,000 hain, toh Capital kitna hoga?",
+      options: [
+        "₹11,00,000",
+        "₹5,00,000",
+        "₹3,00,000",
+        "₹8,00,000"
+      ],
+      answerIndex: 1,
       difficulty: "advanced"
     }
   ]

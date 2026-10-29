@@ -60,7 +60,7 @@ function App() {
       // Get current contestant group index from localStorage, default to 0
       const groupStr = localStorage.getItem("kbc_contestant_group_index");
       let groupIndex = groupStr ? parseInt(groupStr, 10) : 0;
-      if (isNaN(groupIndex) || groupIndex < 0 || groupIndex >= 3) {
+      if (isNaN(groupIndex) || groupIndex < 0 || groupIndex >= contestantGroups.length) {
         groupIndex = 0;
       }
 
@@ -68,8 +68,8 @@ function App() {
       const sessionQuestions = contestantGroups[groupIndex];
       setActiveQuestions(sessionQuestions);
 
-      // Save next group index for next game session (0 -> 1 -> 2 -> 0 ...)
-      localStorage.setItem("kbc_contestant_group_index", (groupIndex + 1) % 3);
+      // Save next group index for next game session (0 -> 1 -> 2 -> 3 -> 0 ...)
+      localStorage.setItem("kbc_contestant_group_index", (groupIndex + 1) % contestantGroups.length);
     }
 
     setScreen("game");
