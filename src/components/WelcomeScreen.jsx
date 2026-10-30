@@ -56,10 +56,10 @@ export default function WelcomeScreen({ onStartGame }) {
         </div>
 
         <h1 className="text-3xl font-extrabold mb-2 tracking-wide">
-          <span className="text-gold-gradient"> THE DIGITAL CHALLENGE</span>
+          <span className="text-gold-gradient"> THE FINANCIAL QUIZ CHALLENGE</span>
         </h1>
         <p className="text-sm mb-6 max-w-md mx-auto" style={{ color: "var(--text-muted)", lineHeight: 1.5 }}>
-          PUT YOUR IT KNOWLEDGE TO THE TEST IN THESE HIGH-STAKES ROUNDS
+          Think Fast. Calculate Smart. Win Big.
         </p>
 
         <form onSubmit={handleStart} className="max-w-sm mx-auto flex flex-col gap-md">
